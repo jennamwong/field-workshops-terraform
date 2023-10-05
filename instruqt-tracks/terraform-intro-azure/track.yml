@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 slug: terraform-intro-azure
 id: oppbddvupbkc
 type: track
@@ -362,11 +365,13 @@ challenges:
     terraform plan
     ```
 
-    Choose an Azure location near to you but different from the default one which is "centralus". Add a `location` variable to your "terraform.tfvars" file, setting it to your desired location such as `East US`, `UK South`, or `Southeast Asia`. You can also use shorter names like `eastus`, `uksouth`, or `southeastasia`; in fact, Terraform will convert the longer names with spaces to the shorter names without them.
+    Choose an Azure location near to you but different from the default one which is "eastus". Add a `location` variable to your "terraform.tfvars" file, setting it to your desired location such as `East US`, `UK South`, or `Southeast Asia`. You can also use shorter names like `eastus`, `uksouth`, or `southeastasia`; in fact, Terraform will convert the longer names with spaces to the shorter names without them.
 
     See this [page](https://azure.microsoft.com/en-us/global-infrastructure/geographies/) for a list of valid Azure locations (which shows the longer names with spaces).
 
     Choosing a location close to you can help improve speed and performance.
+
+    (**Note that not all Azure regions support all VM types**; if you get an error about the SKU failing because of capacity restrictions when you run the Terraform commands below, try changing to a different region.)
 
     **Be sure to click the disk icon above the file to save your change!**
 
@@ -615,7 +620,7 @@ challenges:
 
     Uncomment the code by removing the `#` characters from the beginning of each line. Be sure to save the file.
 
-    Now run `terraform apply` again. Observe the results.
+    Now run `terraform apply` again and answer "yes" when prompted. Observe the results.
 
     Look at the **location** and **resource_group_name** parameters inside the vnet resource. See how they point back at the first resource in the file? The virtual network resource inherits settings from the resource group.
 

@@ -1,0 +1,9 @@
+#!/bin/bash -l
+set -euxvo pipefail
+
+# Create /tmp/skip-check to disable this check
+if [ -f /tmp/skip-check ]; then
+    rm /tmp/skip-check
+fi
+
+exit 0

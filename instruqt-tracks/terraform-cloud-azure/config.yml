@@ -1,4 +1,7 @@
-version: "2"
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
+version: "3"
 virtualmachines:
 - name: workstation
   image: instruqt-hashicorp/tfc-workstation-1-1-4
